@@ -15,14 +15,14 @@ public class SungjukMgmtUI {
 	}
 	
 	private int showMenu() {
-		System.out.println("*****Menu*****");
-		System.out.println("1. ¸ðµç ÇÐ»ý º¸±â"); // SELECT (Read)
-		System.out.println("2. ÇÐ»ý °Ë»ö ÇÏ±â");
-		System.out.println("3. ÇÐ»ý ÀÔ·Â ÇÏ±â"); // INSERT (Create)
-		System.out.println("4. ÇÐ»ý Á¤º¸ ¼öÁ¤ ÇÏ±â"); // UPDATE (Update)
-		System.out.println("5. ÇÐ»ý »èÁ¦ ÇÏ±â"); // DELETE (Delete)
-		System.out.println("9. ÇÁ·Î±×·¥ Á¾·á");
-		System.out.print("¼±ÅÃ >> ");
+		System.out.println("\n*****Menu*****");
+		System.out.println("1. ëª¨ë“  í•™ìƒ ë³´ê¸°"); // SELECT (Read)
+		System.out.println("2. í•™ìƒ ê²€ìƒ‰ í•˜ê¸°");
+		System.out.println("3. í•™ìƒ ìž…ë ¥ í•˜ê¸°"); // INSERT (Create)
+		System.out.println("4. í•™ìƒ ì •ë³´ ìˆ˜ì • í•˜ê¸°"); // UPDATE (Update)
+		System.out.println("5. í•™ìƒ ì‚­ì œ í•˜ê¸°"); // DELETE (Delete)
+		System.out.println("9. í”„ë¡œê·¸ëž¨ ì¢…ë£Œ");
+		System.out.print("ì„ íƒ >> ");
 		return this.scan.nextInt();
 	}
 	
@@ -30,13 +30,16 @@ public class SungjukMgmtUI {
 		switch(choice) {
 		case 1 : Output output = new Output(); 
 				output.output(); break;
-		case 2 : break;
+		case 2 : Search search = new Search(this.scan);
+				search.serch(); break;
 		case 3 : Input input = new Input(this.scan);
 				input.input(); break;
-		case 4 : break;
-		case 5 : break;
+		case 4 : Update update = new Update(this.scan);
+				update.update(); break;
+		case 5 : Delete delete = new Delete(this.scan);
+				delete.delete(); break;
 		case 9 : System.out.println("Bye!!"); System.exit(0); break;
-		default : System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		default : System.out.println("ìž˜ëª» ìž…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ìž…ë ¥í•´ì£¼ì„¸ìš”");
 			
 		}
 	}
