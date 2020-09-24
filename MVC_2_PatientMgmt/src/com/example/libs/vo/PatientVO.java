@@ -1,16 +1,16 @@
 package com.example.libs.vo;
 
 public class PatientVO {
-	private int bunho; 			//È¯ÀÚ ¹øÈ£
-	private String code; 		// Áø·á ºÎ¼­ÄÚµå
-	private int days; 			// È¯ÀÚ ÀÔ¿ø ÀÏ¼ö
-	private int age; 			// È¯ÀÚ ³ªÀÌ
-	private String dname;		// Áø·á ºÎ¼­ ÀÌ¸§
-	private int checkup_fee;	// È¯ÀÚ ÁøÂûºñ
-	private int hospital_fee;	// È¯ÀÚ ÀÔ¿øºñ
-	private int sum;			// È¯ÀÚ Áø·áºñ
+	private int bunho; 			//í™˜ì ë²ˆí˜¸
+	private String code; 		// ì§„ë£Œ ë¶€ì„œì½”ë“œ
+	private int days; 			// í™˜ì ì…ì› ì¼ìˆ˜
+	private int age; 			// í™˜ì ë‚˜ì´
+	private String dname;		// ì§„ë£Œ ë¶€ì„œ ì´ë¦„
+	private int checkup_fee;	// í™˜ì ì§„ì°°ë¹„
+	private int hospital_fee;	// í™˜ì ì…ì›ë¹„
+	private int sum;			// í™˜ì ì§„ë£Œë¹„
 	
-	public PatientVO() {} // ±âº» »ı¼ºÀÚ
+	public PatientVO() {} // ê¸°ë³¸ ìƒì„±ì
 
 	public PatientVO(int bunho, String code, int days, int age) {
 		this.bunho = bunho;
@@ -85,7 +85,7 @@ public class PatientVO {
 
 	@Override
 	public String toString() {
-		return String.format("%d\t\t%s\t\t%d\t\t%d\t\t%d\n", bunho, dname,
+		return String.format("%d\t\t%s\t\t%d\t\t%d\t\t%d", bunho, dname,
 				checkup_fee, hospital_fee, sum);
 	}
 	
