@@ -7,7 +7,14 @@ import com.example.libs.vo.PatientVO;
 
 public interface PatientMgmtDao {
 	int insert(PatientVO patient) throws SQLException;
-	// ÀÔ·ÂÇÒ È¯ÀÚ¸¦ ÆÄ¶ó¹ÌÅÍ·Î ¹Ş¾Æ¼­ È¯ÀÚ Å×ÀÌºí¿¡ ÀÔ·ÂÇÑ´Ù. ÀÔ·ÂÇÑ ÇàÀÇ °¹¼ö¸¦ ¹İÈ¯ÇÑ´Ù.
+	//ì…ë ¥í•  í™˜ìë¥¼ íŒŒë¼ë¯¸í„°ë¡œ ë°›ì•„ì„œ í™˜ì í…Œì´ë¸”ì— ì…ë ¥í•œë‹¤. ì…ë ¥í•œ í–‰ì˜ ê°¯ìˆ˜ë¥¼ ë°˜í™˜í•œë‹¤.
+	
 	ArrayList<PatientVO> select() throws SQLException;
-	// ¸ğµç È¯ÀÚ µ¥ÀÌÅÍ¸¦ Å×ÀÌºí¿¡¼­ ³Ñ°Ü¹Ş¾Æ¼­ ¼­ºñ½º ÂÊ¿¡ ÄÃ·º¼ÇÀ¸·Î ³Ñ°ÜÁØ´Ù.
+	//ëª¨ë“  í™˜ì ë°ì´í„°ë¥¼ í…Œì´ë¸”ì—ì„œ ë„˜ê²¨ë°›ì•„ì„œ ì„œë¹„ìŠ¤ìª½ì— ì»¬ë ‰ì…˜ìœ¼ë¡œ ë„˜ê²¨ì¤€ë‹¤.
+
+	String selectDName(String code) throws SQLException;
+
+	double selectRate(int days) throws SQLException;
+
+	int selectCheckup(int age) throws SQLException;
 }
